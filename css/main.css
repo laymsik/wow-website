@@ -3,6 +3,7 @@
 @import url('hero.css');
 @import url('about.css');
 @import url('street.css');
+@import url('footer.css');
 
 html {
     scroll-behavior: smooth;
@@ -24,6 +25,11 @@ body {
     background-color: rgb(37, 37, 37);
     overflow-x: hidden;
     position: relative;
+    background-image: url("../image/bgc-photoaidcom-darken.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .container {
@@ -31,12 +37,4 @@ body {
     max-width: 100%;
     margin: 0 auto;
     align-items: center;
-}
-
-.button {
-    background-color: #8f0101;
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 10px 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
