@@ -69,7 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-// Скрипт для открытия и закрытия модальных окон
+// modal win
+
+
 const buttons = document.querySelectorAll('.btn-details');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.close');
@@ -78,21 +80,30 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
-        modal.style.display = 'flex'; /* Используем flex для центрирования */
+        modal.style.display = 'flex'; // Показываем модальное окно
+        setTimeout(() => {
+            modal.classList.add('active'); // Добавляем класс для плавного появления
+        }, 10); // Небольшая задержка для корректного запуска анимации
     });
 });
 
 closeButtons.forEach(closeButton => {
     closeButton.addEventListener('click', () => {
         const modal = closeButton.closest('.modal');
-        modal.style.display = 'none';
+        modal.classList.remove('active'); // Убираем класс для плавного исчезновения
+        setTimeout(() => {
+            modal.style.display = 'none'; // Скрываем модальное окно после завершения анимации
+        }, 300); // Время должно совпадать с длительностью перехода
     });
 });
 
 window.addEventListener('click', (event) => {
     modals.forEach(modal => {
         if (event.target === modal) {
-            modal.style.display = 'none';
+            modal.classList.remove('active'); // Убираем класс для плавного исчезновения
+            setTimeout(() => {
+                modal.style.display = 'none'; // Скрываем модальное окно после завершения анимации
+            }, 300); // Время должно совпадать с длительностью перехода
         }
     });
 });
