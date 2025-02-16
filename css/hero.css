@@ -1,5 +1,5 @@
 .hero {
-    padding-top: 40vh;
+    padding-top: 200px;
     background-image: url("../image/image-hero.jpg");
     background-position: center center;
     background-size: cover;
@@ -34,7 +34,7 @@ h1 {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
+    0%, 100% { opacity: 1;}
     50% { opacity: 0; }
 }
 

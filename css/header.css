@@ -15,7 +15,7 @@ header {
 }
 
 nav {
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ nav {
 /* Адаптивные стили */
 @media screen and (max-width: 900px) {
     .header__nav-links {
-        margin-top: 100px;
+        margin-top: 80px;
         position: absolute;
         right: 0;
         height: 100vh;
