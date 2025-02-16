@@ -32,7 +32,7 @@ document.addEventListener('click', (event) => {
 const typedTextSpan = document.querySelector(".hero__typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["героев Великой Отечественной войны.", "героев Второй Мировой войны."];
+const textArray = ["героев Второй Мировой войны."];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 1000;
@@ -65,6 +65,50 @@ function erase() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+// Скрипт для открытия и закрытия модальных окон
+const buttons = document.querySelectorAll('.btn-details');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'flex'; /* Используем flex для центрирования */
+    });
+});
+
+closeButtons.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+        const modal = closeButton.closest('.modal');
+        modal.style.display = 'none';
+    });
+});
+
+window.addEventListener('click', (event) => {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+// Плавный скролл для якорных ссылок
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Отменяем стандартное поведение
+        const targetId = this.getAttribute('href'); // Получаем ID целевого элемента
+        const targetElement = document.querySelector(targetId); // Находим целевой элемент
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // Плавный скролл
+                block: 'start' // Выравнивание по верху целевого элемента
+            });
+        }
+    });
 });

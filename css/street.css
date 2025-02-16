@@ -1,0 +1,112 @@
+#street {
+    background-image: url("../image/street.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100vh;
+    text-align: center;
+    scroll-margin-block-start: 80px;
+}
+
+.hero__streets-title {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.street-card>h3 {
+    font-size: 40px;
+    color: #000000;
+}
+
+.street-card>p {
+    color: #000;
+    font-size: 25px;
+}
+
+.hero-streets {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.streets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.street-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-details {
+    background: #8f0101;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-details:hover {
+    background: #6f0000;
+}
+
+/* Стили для модальных окон */
+.modal {
+    text-align: center;
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный фон */
+    justify-content: center;
+    /* Центрирование по горизонтали */
+    align-items: center;
+    /* Центрирование по вертикали */
+    z-index: 1000;
+    /* Чтобы окно было поверх других элементов */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    /* Ширина окна */
+    position: relative;
+    margin: auto;
+    /* Автоматические отступы для центрирования */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.map {
+    border-radius: 10px;
+    width: 400;
+    max-width: 100%;
+    height: 250;
+}
+
+.modal__photo {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
