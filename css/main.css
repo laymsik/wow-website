@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shafarik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&display=swap');
 @import url('header.css');
 @import url('hero.css');
 @import url('about.css');
@@ -13,7 +13,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Shafarik", serif;
+    font-family: "Oswald", serif;
 }
 
 a {
