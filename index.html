@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Улицы героев ВОВ</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header>
+    <header class="scroll-animate">
         <div class="container">
-            <nav class="header__nav">
+            <nav class="header__nav ">
                 <div class="header__logo">Улицы героев ВОВ</div>
                 <ul class="header__nav-links">
                     <li><a href="#hero">Главная</a></li>
@@ -31,27 +32,27 @@
         <section class="hero" id="hero">
             <div class="container">
                 <div class="wrapper">
-                    <h1 class="hero__typing-effect">Улицы города Элисты, названные в честь <span
+                    <h1 class="hero__typing-effect scroll-animate">Улицы города Элисты, названные в честь <span
                             class="hero__typed-text"></span><span class="cursor">&nbsp;</span></h1>
                 </div>
-                <a href="#about" class="button">Узнать больше</a>
+                <a href="#about" class="button scroll-animate">Узнать больше</a>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="scroll-animate">
             <h2>О проекте</h2>
-            <div class="about__wrapper">
+            <div class="about__wrapper scroll-animate">
                 <p>Проект посвящен улицам Элисты, названным в честь героев Великой Отечественной войны. Мы рассказываем
                     о подвигах, истории и людях, чьи имена увековечены в названиях улиц. Цель проекта — сохранить память
                     о героях и их вкладе в победу над фашизмом.</p>
-                <img src="image/about.jpg" alt="." class="about__image">
+                <img src="image/about.jpg" alt="." class="about__image scroll-animate">
             </div>
         </section>
-        <section class="hero-streets" id="street">
+        <section class="hero-streets scroll-animate" id="street">
             <div class="container">
-                <h2 class="hero__streets-title">Улицы героев</h2>
+                <h2 class="hero__streets-title scroll-animate">Улицы героев</h2>
                 <div class="streets-grid">
                     <!-- Карточка улицы -->
-                    <div class="street-card">
+                    <div class="street-card scroll-animate">
                         <h3>Улица Гермашева</h3>
                         <!-- <img src="image/herois/1.webp" alt="." class="streets-photo"> -->
                         <iframe
@@ -63,7 +64,7 @@
                     </div>
 
                     <!-- Карточка улицы -->
-                    <div class="street-card">
+                    <div class="street-card scroll-animate">
                         <h3>Улица Хонинова</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.3156137093497!2d44.263399513238454!3d46.303569070979506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4101d17be5ed49f5%3A0x81003795b5c74e61!2z0YPQuy4g0LjQvC4g0JwuINCSLiDQpdC-0L3QuNC90L7QstCwLCDQrdC70LjRgdGC0LAsINCg0LXRgdC_LiDQmtCw0LvQvNGL0LrQuNGPLCAzNTgwMDA!5e0!3m2!1sru!2sru!4v1739699999664!5m2!1sru!2sru"
@@ -104,15 +105,14 @@
             </div>
         </div>
     </main>
-    <footer id="contacts">
-        <h2>Свяжитесь с нами</h2>
+    <footer id="contacts" class="scroll-animate">
+        <h2 class="scroll-animate">Свяжитесь с нами</h2>
         <form>
-            <input type="text" placeholder="Имя" required>
-            <input type="email" placeholder="Почта" required>
-            <textarea placeholder="Сообщение" required></textarea>
-            <button type="submit">Отправить</button>
+            <input class="scroll-animate" type="text" placeholder="Имя" required>
+            <input class="scroll-animate" type="email" placeholder="Почта" required>
+            <textarea class="scroll-animate" placeholder="Сообщение" required></textarea>
+            <button class="scroll-animate" type="submit">Отправить</button>
         </form>
-        <div class="contact-info">
             <div class="social-links">
                 <a href="#">VK</a>
                 <a href="#">Telegram</a>
@@ -122,6 +122,7 @@
             © 2025 Улицы героев ВОВ
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 

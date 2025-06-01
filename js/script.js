@@ -2,6 +2,25 @@ const burger = document.querySelector('.header__burger');
 const navLinks = document.querySelector('.header__nav-links');
 const navLinksLi = document.querySelectorAll('.header__nav-links li');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.scroll-animate');
+    
+    function checkScroll() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight - 50; // Элемент выше низа окна на 50px
+            
+            if (isVisible) {
+                el.classList.add('show');
+            }
+        });
+    }
+    
+    // Проверяем при загрузке и при скролле
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+});
+
 // Функция для закрытия меню
 function closeMenu() {
     navLinks.classList.remove('nav-active');
@@ -32,7 +51,7 @@ document.addEventListener('click', (event) => {
 const typedTextSpan = document.querySelector(".hero__typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["героев Второй Мировой войны."];
+const textArray = ["героев Великой Отечественной войны."];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 1000;
